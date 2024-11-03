@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="Congratulations!" />
+
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./style/translateelement.css"
+    />
+    <link
+      type="text/css"
+      href="./style/order_me.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link href="./style/sweetalert.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <title class="title">Congratulations!</title>
+  </head>
+
+  <body>
+    <div id="a-nav">
+      <div class="icon-nav"></div>
+      <h1 id="title">Congratulations!</h1>
+      <div class="icon-basket"></div>
+    </div>
+    <main>
+      <div class="content">
+        <div class="main-content" id="content1">
+          <div class="select">
+            You have
+            <b
+              ><span class="text" id="mins">NaN</span> minutes and
+              <span id="hsecs">NaN</span> seconds</b
+            >
+            to play or your points will be awarded to others.
+          </div>
+          <strong class="centered cw pt10"
+            >You can win a special prize today!</strong
+          >
+          <div id="spinner">
+            <img
+              id="spinBG"
+              fetchpriority="high"
+              src="./img/11.webp"
+              alt="img"
+            />
+            <img id="spin" src="./img/aespinner.webp" alt="img" />
+            <img id="win" onclick="" src="./img/spin.webp" alt="img" />
+            <img
+              class="animated rotateIn"
+              id="iphone"
+              src="./img/arprize.webp"
+              alt="img"
+            />
+          </div>
+          <p class="centered"></p>
+          <p class="cw">comment</p>
+          <hr />
+          <p class="cw">
+            <span id="liked" onclick="total_likes();return false" class="cw cp"
+              >Like</span
+            >
+            • Reply • Follow
+          </p>
+          <hr />
+          <div class="comments1">
+            <div>
+              <small><span id="likes" class="like">1,221</span> likes</small>
+            </div>
+
+            <div>
+              <span class="photo p1">
+                <img src="./img/1.webp" alt="img" />
+              </span>
+              <div class="commentsblock">
+                <b>Webster Torphy</b>
+                <p class="comment1">I received it today, I'm so happy!</p>
+                <small><span class="like">Like</span> · <u>4 minutes</u></small>
+              </div>
+            </div>
+            <div>
+              <span class="photo p2">
+                <img src="./img/2.webp" alt="img" />
+              </span>
+              <div class="commentsblock">
+                <b>Shyann Boehm</b>
+                <p class="comment2">
+                  No prize for me... can I have another chance?
+                </p>
+                <small><span class="like">Like</span> · <u>5 minutes</u></small>
+              </div>
+            </div>
+            <div>
+              <span class="photo p3">
+                <img src="./img/3.webp" alt="img" />
+              </span>
+              <div class="commentsblock">
+                <b>King Terry</b>
+                <p class="comment3">Got the iPhone today!! Thanks!</p>
+                <small
+                  ><span class="like">Like</span> · <u>11 minutes</u></small
+                >
+              </div>
+            </div>
+            <div>
+              <span class="photo p4">
+                <img src="./img/4.webp" alt="img" />
+              </span>
+              <div class="commentsblock">
+                <b>Aurelie Weissnat</b>
+                <p class="comment4">I won! Wooooooo</p>
+                <small
+                  ><span class="like">Like</span> · <u>15 minutes</u></small
+                >
+              </div>
+            </div>
+            <div>
+              <span class="photo p5">
+                <img src="./img/5.webp" alt="img" />
+              </span>
+              <div class="commentsblock">
+                <b>Greyson Koelpin</b>
+                <p class="comment5">This is amazing I can't wait to play!</p>
+                <small
+                  ><span class="like">Like</span> · <u>38 minutes</u></small
+                >
+              </div>
+            </div>
+            <div>
+              <span class="photo p6">
+                <img src="./img/6.webp" alt="img" />
+              </span>
+              <div class="commentsblock">
+                <b>Irwin Wilkinson</b>
+                <p class="comment6">
+                  Call me a sore loser, because I really wanted it!
+                </p>
+                <small
+                  ><span class="like">Like</span> · <u>45 minutes</u></small
+                >
+              </div>
+            </div>
+            <div>
+              <span class="photo p7">
+                <img src="./img/7.webp" alt="img" />
+              </span>
+              <div class="commentsblock">
+                <b>Savanna Harris</b>
+                <p class="comment7">That was so easy, I won!!!!</p>
+                <small><span class="like">Like</span> · <u>1 hour</u></small>
+              </div>
+            </div>
+            <div>
+              <span class="photo p8">
+                <img src="./img/8.webp" alt="img" />
+              </span>
+              <div class="commentsblock">
+                <b>Ashley Schulist</b>
+                <p class="comment8">
+                  I've never won anything, but I hope I'm lucky!
+                </p>
+                <small><span class="like">Like</span> · <u>1 hour</u></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="sweet-overlay" tabindex="-1"></div>
+    <div class="sweet-alert animated bounceIn visible" id="modal01">
+      <h2 class="sweet-title" class="title">Congratulations!</h2>
+      <p class="text1">
+        Every month we select a lucky customer to win one prize.
+      </p>
+      <div class="sa-button-container">
+        <div class="sa-confirm-button-container">
+          <button class="btn" onclick="hidemodal01()" class="ok">OK</button>
+          <div class="la-ball-fall"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sweet-alert animated bounceIn" id="modal02">
+      <div class="sa-icon sa-success" id="success02">
+        <span class="sa-line sa-tip" id="successtip02"></span>
+        <span class="sa-line sa-long" id="successlong02"></span>
+        <div class="sa-placeholder"></div>
+        <div class="sa-fix"></div>
+      </div>
+      <h2 class="text2">You only won $200...want to try again?</h2>
+      <p></p>
+      <div class="sa-button-container">
+        <div class="sa-confirm-button-container">
+          <button onclick="hidemodal02()" class="btn" id="ok">OK</button>
+          <div class="la-ball-fall"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sweet-alert animated bounceIn" id="modal03">
+      <div class="sa-icon sa-success" id="success03">
+        <span class="sa-line sa-tip" id="successtio03"></span>
+        <span class="sa-line sa-long" id="successlong03"></span>
+        <div class="sa-placeholder"></div>
+        <div class="sa-fix"></div>
+      </div>
+      <h2 class="title">Congratulations!</h2>
+      <p class="text3">
+        You won the $2,000! <br />
+        To receive the amount, complete 2 steps: <br />
+        Step 1: Download the free app from google play <br />
+        Step 2: Open the app and get a bonus!
+      </p>
+      <div class="sa-button-container">
+        <div class="sa-confirm-button-container">
+          <a class="link btn" href="{offer_link}" id="ok">OK</a>
+          <div class="la-ball-fall"></div>
+        </div>
+      </div>
+    </div>
+    <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+      <div class="p8">
+        <div>
+          <div class="logo">
+            <img
+              src="./img/translate_24dp.webp"
+              width="20"
+              height="20"
+              alt="Google Переводчик"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="top p8 fl w100">
+        <h1 class="title gray">Исходный текст</h1>
+      </div>
+      <div class="middle p8">
+        <div class="original-text"></div>
+      </div>
+      <div class="bottom p8">
+        <div class="activity-links">
+          <span class="activity-link">Предложить лучший вариант перевода</span>
+        </div>
+        <div class="started-activity-container">
+          <hr class="hr" />
+          <div class="activity-root"></div>
+        </div>
+      </div>
+      <div class="status-message"></div>
+    </div>
+    <div class="goog-te-spinner-pos">
+      <div class="goog-te-spinner-animation">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="goog-te-spinner"
+          width="96px"
+          height="96px"
+          viewBox="0 0 66 66"
+        >
+          <circle
+            class="goog-te-spinner-path"
+            fill="none"
+            stroke-width="6"
+            stroke-linecap="round"
+            cx="33"
+            cy="33"
+            r="30"
+          ></circle>
+        </svg>
+      </div>
+    </div>
+    <script src="./script/jquery-3.6.0.min.js.js"></script>
+    <script defer src="./script/index.js"></script>
+  </body>
+  <script defer="" type="text/javascript">
+    setInterval("countdown()", 1000);
+    function countdown() {
+      var mins = parseInt(document.getElementById("mins").innerHTML);
+      var secs = parseInt(document.getElementById("hsecs").innerHTML);
+      if (mins != 0 && secs == 0) {
+        nmins = mins - 1;
+        nsecs = 59;
+      } else if (mins != 0 || secs != 0) {
+        nmins = mins;
+        nsecs = secs - 1;
+      } else if (mins == 0 && secs == 0) {
+        nmins = mins;
+        nsecs = secs;
+      }
+      document.getElementById("mins").innerHTML = nmins;
+      document.getElementById("hsecs").innerHTML = nsecs;
+      if (nsecs < 10) nsecs = "0" + nsecs;
+      document.getElementById("hsecs").innerHTML = nsecs;
+    }
+  </script>
+  <script src="./script/lang.js"></script>
+</html>
